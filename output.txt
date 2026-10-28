@@ -1,0 +1,17 @@
+✓ AI_MODEL: gpt-5.4-nano
+✓ AI_URL: https://api.openai.com/v1
+✓ Optional environment: GITHUB_TOKEN
+OpenSwap server running at http://localhost:3001
+[/api/swaps] prompt: User request:
+Which ones have the most permissive licenses?
+Turn 1
+[
+  {
+    id: 'msg_0889bff601af08ba006ab98c32650c87d0a6b4a15b7a6f6a0a',
+    type: 'message',
+    status: 'completed',
+    content: [ [Object] ],
+    phase: 'final_answer',
+    role: 'assistant'
+  }
+]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find open-source alternatives by describing what you want to replace or selecting a starter swap."
+    />
+    <title>OpenSwap</title>
+    <link rel="stylesheet" href="frontend/style.css" />
+  </head>
+  <body>
+    <div class="conversation-shell">
+      <aside id="sidebar" class="conversation-sidebar" aria-label="Previous chats">
+        <div class="sidebar-header">
+          <h2>Your chats</h2>
+          <div class="sidebar-actions">
+            <button id="new-conversation" class="icon-button new-conversation" type="button"
+              aria-label="New chat" title="New chat">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 3l5 5M10 14l1-5 7-7 5 5-7 7-5 1Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button id="close-sidebar" class="icon-button close-sidebar" type="button"
+              aria-label="Close previous chats">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m6 6 12 12M6 18 18 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="conversation-list"
+          class="conversation-list"
+          aria-label="Previous chats list"
+        ></nav>
+      </aside>
+
+      <button
+        id="sidebar-backdrop"
+        class="sidebar-backdrop"
+        type="button"
+        aria-label="Close previous chats"
+        tabindex="-1"
+      ></button>
+
+      <main id="app" class="app-shell">
+        <header class="brand">
+          <svg
+            class="brand-mark"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M6 8h10.5l-3-3M18 16H7.5l3 3"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="brand-name">Open<span>Swap</span></span>
+          <button
+            id="open-sidebar"
+            class="icon-button history-toggle"
+            type="button"
+            aria-label="Open previous chats"
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </header>
+
+        <section id="search-flow" class="search-flow">
+          <section class="starter-swaps-section">
+            <h2>Wanna swap any of these?</h2>
+            <div id="starter-swaps" class="starter-swaps-list"></div>
+          </section>
+
+          <section id="output-container" class="output-section output-shell hidden">
+            <div id="output-content" class="output-content" aria-live="polite"></div>
+          </section>
+
+          <section id="input-panel" class="input-panel">
+            <form id="search-form" class="input-form">
+              <div id="input-area" class="input-area">
+                <label class="prompt-label" for="user-input">
+                  Write down any other tools or specific requirements:
+                </label>
+                <textarea
+                  id="user-input"
+                  placeholder="E.g. 'I need an email marketing tool for my university club.'"
+                ></textarea>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" id="submit-button" class="submit-button">
+                  <span id="submit-label">Swap it</span>
+                </button>
+              </div>
+            </form>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./frontend/index.js"></script>
+  </body>
+</html>
